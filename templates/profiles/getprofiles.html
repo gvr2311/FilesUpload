@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+{%block title%} View {%endblock%}
+{%block content%}
+<table border="1" cellpadding="6">
+    <caption><h2>Profiles List</h2></caption>
+{%for r in rows%}
+    <tr>          
+        <td align="center">
+        <img src="{{r.photo.url}}" alt="image" height="150px" width="130px"><br>
+        Full Name : {{r.fn}} {{r.ln}} <br>
+        Technologies Known : {{r.tech}} <br>
+        Email Id : {{r.email}} <br>
+        <a href="#">Delete Profile</a>
+        </td>
+    </tr>   
+{%endfor%}
+</table>
+{%endblock%}
